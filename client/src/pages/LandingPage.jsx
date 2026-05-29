@@ -65,7 +65,6 @@ export default function LandingPage() {
       <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-4000"></div>
       
       {/* Mesh Gradient Background Pattern */}
-      <div className="absolute inset-0 bg-mesh-light dark:bg-none z-0 opacity-40"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 0H0v20h20V0z\' fill=\'%23a1a1aa\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'/%3E%3C/svg%3E')] dark:bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 0H0v20h20V0z\' fill=\'%233f3f46\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'/%3E%3C/svg%3E')] z-0"></div>
 
       {/* Header */}
@@ -140,29 +139,10 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-          <div className="relative glass-panel rounded-2xl border border-white/40 dark:border-white/10 p-2 shadow-2xl">
-            <div className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center aspect-video relative border border-gray-100 dark:border-slate-800">
-              {/* Abstract Mockup inside */}
-              <div className="absolute inset-0 bg-gray-50 dark:bg-slate-900 p-4 sm:p-8 flex flex-col gap-4">
-                 <div className="flex justify-between items-center border-b border-gray-200 dark:border-gray-800 pb-4">
-                    <div className="w-1/3 h-6 bg-gray-200 dark:bg-slate-800 rounded-md animate-pulse"></div>
-                    <div className="flex gap-2">
-                      <div className="w-8 h-8 rounded-full bg-primary-100 dark:bg-primary-900/50"></div>
-                      <div className="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/50"></div>
-                    </div>
-                 </div>
-                 <div className="flex-1 flex gap-4 overflow-hidden">
-                    {[1, 2, 3].map(i => (
-                      <div key={i} className="flex-1 bg-gray-100 dark:bg-slate-800/50 rounded-xl p-3 flex flex-col gap-3">
-                        <div className="w-1/2 h-4 bg-gray-200 dark:bg-slate-700 rounded mb-2"></div>
-                        <div className="w-full h-20 bg-white dark:bg-slate-800 rounded-lg shadow-sm"></div>
-                        <div className="w-full h-24 bg-white dark:bg-slate-800 rounded-lg shadow-sm"></div>
-                        {i === 2 && <div className="w-full h-16 bg-white dark:bg-slate-800 rounded-lg shadow-sm"></div>}
-                      </div>
-                    ))}
-                 </div>
-              </div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+          <div className="relative glass-panel rounded-3xl border border-white/80 dark:border-white/10 p-2 shadow-2xl">
+            <div className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden flex items-center justify-center aspect-video relative border border-gray-100 dark:border-slate-800">
+              <img src="/dashboard-mockup.png" alt="TaskFlow Dashboard" className="w-full h-full object-cover rounded-xl" />
             </div>
           </div>
         </motion.div>

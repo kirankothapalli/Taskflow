@@ -6,7 +6,7 @@
   * { box-sizing: border-box; }
   body {
     @apply bg-surface text-gray-900 font-sans antialiased transition-colors duration-500 min-h-screen bg-fixed;
-    background-image: bg-subtle-grid;
+    background-image: radial-gradient(at 0% 0%, rgba(240, 241, 250, 1) 0, transparent 50%), radial-gradient(at 100% 0%, rgba(225, 227, 246, 1) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(200, 203, 237, 0.5) 0, transparent 50%), radial-gradient(at 0% 100%, rgba(255, 255, 255, 1) 0, transparent 50%);
   }
   .dark body {
     @apply bg-surface-dark text-gray-100 bg-fixed;
@@ -27,27 +27,27 @@
 
 @layer components {
   .glass-panel {
-    @apply bg-white/70 dark:bg-slate-850/70 backdrop-blur-xl border border-gray-200/50 dark:border-white/5;
+    @apply bg-white/60 dark:bg-slate-850/70 backdrop-blur-2xl border border-white/60 dark:border-white/5 shadow-glass dark:shadow-dark-glass;
   }
   
   .card-base {
-    @apply bg-white dark:bg-slate-850 rounded-2xl border-x border-t border-b-4 border-gray-200 dark:border-slate-800 shadow-card dark:shadow-dark-card transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)];
+    @apply bg-white dark:bg-slate-850 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-card dark:shadow-dark-card transition-all duration-300 ease-out;
   }
 
   .btn {
-    @apply relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold tracking-wide text-sm transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden active:shadow-none active:translate-y-[4px];
+    @apply relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold tracking-wide text-sm transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden active:scale-[0.98];
   }
 
   .btn-primary {
-    @apply btn bg-primary-500 text-white shadow-btn hover:bg-primary-400 hover:shadow-btn-hover hover:-translate-y-[2px] border-none;
+    @apply btn bg-gradient-to-tr from-primary-600 to-primary-500 text-white shadow-btn hover:shadow-btn-hover hover:-translate-y-0.5 hover:to-primary-400 border-none;
   }
   
   .btn-secondary {
-    @apply btn bg-white dark:bg-slate-850 text-gray-800 dark:text-gray-200 shadow-[0_4px_0_0_#e5e7eb] dark:shadow-[0_4px_0_0_#1f2937] border-2 border-gray-100 dark:border-gray-800 hover:-translate-y-[2px] hover:shadow-[0_6px_0_0_#d1d5db] dark:hover:shadow-[0_6px_0_0_#374151] active:shadow-none active:translate-y-[4px];
+    @apply btn bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-200 shadow-btn-secondary border border-gray-200 dark:border-gray-700 hover:bg-gray-50 hover:-translate-y-0.5 dark:hover:bg-slate-700;
   }
   
   .btn-danger {
-    @apply btn bg-red-600 text-white shadow-[0_4px_0_0_#b91c1c] hover:bg-red-500 hover:shadow-[0_6px_0_0_#991b1b] hover:-translate-y-[2px] active:shadow-none active:translate-y-[4px] border-none;
+    @apply btn bg-gradient-to-tr from-red-600 to-red-500 text-white shadow-[0_4px_14px_0_rgba(220,38,38,0.39)] hover:shadow-[0_6px_20px_rgba(220,38,38,0.23)] hover:-translate-y-0.5 border-none;
   }
   
   .card {
@@ -55,7 +55,7 @@
   }
   
   .input {
-    @apply w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-slate-900/50 text-gray-900 dark:text-gray-100 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 transition-all duration-300;
+    @apply w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-100 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 transition-all duration-300 shadow-subtle hover:border-gray-300 dark:hover:border-gray-600;
   }
   
   .label {

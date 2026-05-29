@@ -49,6 +49,23 @@ export default {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'mesh-light': 'radial-gradient(at 0% 0%, rgba(240, 241, 250, 1) 0, transparent 50%), radial-gradient(at 100% 0%, rgba(225, 227, 246, 1) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(200, 203, 237, 0.5) 0, transparent 50%), radial-gradient(at 0% 100%, rgba(255, 255, 255, 1) 0, transparent 50%)',
         'subtle-grid': 'url("data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 0H0v20h20V0z\' fill=\'%23f3f4f6\' fill-opacity=\'0.2\' fill-rule=\'evenodd\'/%3E%3C/svg%3E")',
+      },
+      animation: {
+        blob: "blob 7s infinite",
+        tilt: "tilt 10s infinite linear",
+      },
+      keyframes: {
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" }
+        },
+        tilt: {
+          "0%, 50%, 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(1deg)" },
+          "75%": { transform: "rotate(-1deg)" },
+        }
       }
     },
   },
